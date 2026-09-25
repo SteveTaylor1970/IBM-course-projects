@@ -32,5 +32,14 @@ outputs = model.generate(
     top_p=0.85
 )
 ## Remove this print statement after testing
-print(outputs)
+#print(outputs)
+
+response = tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
+print(response)
+
+conversation_history.append(f"User: {input_text}")
+conversation_history.append(f"Bot: {response}")
+print(conversation_history)
+
+
 
