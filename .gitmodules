@@ -1,0 +1,3 @@
+[submodule "chatbot/chatbot/LLM_application_chatbot"]
+	path = chatbot/chatbot/LLM_application_chatbot
+	url = https://github.com/ibm-developer-skills-network/LLM_application_chatbot
