@@ -21,7 +21,8 @@ model = AutoModelForCausalLM.from_pretrained(
 messages = [
     {
         "role": "system",
-        "content": "You are a helpful AI assistant. Give short and concise answers in 2-3 lines."
+        #"content": "You are a helpful AI assistant. Give short and concise answers in 2-3 lines."
+        "content": "You are a very friendly and cheerful assistant. Always respond in a warm, casual, and encouraging tone."
     }
 ]
 
@@ -49,8 +50,10 @@ while True:
             tokenized["input_ids"],
             attention_mask=tokenized["attention_mask"],
             max_new_tokens=60,
-            temperature=0.5,
-            top_p=0.8,
+            #temperature=0.5,
+            temperature=0.9,
+            #top_p=0.8,
+            top_p=0.95,
             do_sample=True,
             repetition_penalty=1.3,
             no_repeat_ngram_size=3,
